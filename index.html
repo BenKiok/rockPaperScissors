@@ -56,7 +56,34 @@
             }
 
         function game() {
+            let didPlayerWin;
+            let pWins;
+            let cpuWins;
+            let tryAgain;
 
+            for (let i = 0; i < 5; i++) {
+                didPlayerWin = playRound(playerMove(), computerPlay());
+
+                if (didplayerWin) {
+                    pWins++;
+                } else if (!didplayerWin) {
+                    cpuWins++;
+                }
+            }
+
+            if (pWins > cpuWins) {
+                alert(`You win! ${pWins} out of 5 rounds`);
+            } else if (pWins < cpuWins) {
+                alert(`You lose! ${pWins} out of 5 rounds`);
+            } else {
+                alert(`You tied! ${pWins} out of 5 rounds`);
+            }
+
+            tryAgain = confirm("Play again?");
+
+            if (tryAgain) {
+                game();
+            }
         }
         </script>
     </body>
