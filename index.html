@@ -24,27 +24,26 @@
 
             function playRound (pSelect, cpuSelect) {
                 let results;
-                let player = pSelect.toLowerCase();
 
-                if (player === cpuSelect) {
+                if (pSelect === cpuSelect) {
                     results = "It's a tie! Play again!";
-                } else if (player === "rock") {
+                } else if (pSelect === "rock") {
                     if (cpuSelect === "paper") {
-                        results = `You lose! ${cpuSelect} beats ${player}!`;
+                        results = `You lose! ${cpuSelect} beats ${pSelect}!`;
                     } else {
-                        results = `You win! ${player} beats ${cpuSelect}!`;
+                        results = `You win! ${pSelect} beats ${cpuSelect}!`;
                     }
-                } else if (player === "paper") {
+                } else if (pSelect === "paper") {
                     if (cpuSelect === "scissors") {
-                        results = `You lose! ${cpuSelect} beats ${player}!`;
+                        results = `You lose! ${cpuSelect} beats ${pSelect}!`;
                     } else {
-                        results = `You win! ${player} beats ${cpuSelect}!`;
+                        results = `You win! ${pSelect} beats ${cpuSelect}!`;
                     }
                 } else {
                     if (cpuSelect === "rock") {
-                        results = `You lose! ${cpuSelect} beats ${player}!`;
+                        results = `You lose! ${cpuSelect} beats ${pSelect}!`;
                     } else {
-                        results = `You win! ${player} beats ${cpuSelect}!`;
+                        results = `You win! ${pSelect} beats ${cpuSelect}!`;
                     }
                 }
 
