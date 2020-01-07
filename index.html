@@ -12,6 +12,7 @@
                     alert("Invalid play. Try again.");
                     playerMove();
                 }
+
                 return move;
             }
             
@@ -23,31 +24,35 @@
             }
 
             function playRound (pSelect, cpuSelect) {
-                let results;
 
                 if (pSelect === cpuSelect) {
-                    results = "It's a tie! Play again!";
+                    alert("It's a tie! Play again!");
+                    return;
                 } else if (pSelect === "rock") {
                     if (cpuSelect === "paper") {
-                        results = `You lose! ${cpuSelect} beats ${pSelect}!`;
+                        alert(`You lose! ${cpuSelect} beats ${pSelect}!`);
+                        return false;
                     } else {
-                        results = `You win! ${pSelect} beats ${cpuSelect}!`;
+                        alert(`You win! ${pSelect} beats ${cpuSelect}!`);
+                        return true;
                     }
                 } else if (pSelect === "paper") {
                     if (cpuSelect === "scissors") {
-                        results = `You lose! ${cpuSelect} beats ${pSelect}!`;
+                        alert(`You lose! ${cpuSelect} beats ${pSelect}!`);
+                        return false;
                     } else {
-                        results = `You win! ${pSelect} beats ${cpuSelect}!`;
+                        alert(`You win! ${pSelect} beats ${cpuSelect}!`);
+                        return true;
                     }
                 } else {
                     if (cpuSelect === "rock") {
-                        results = `You lose! ${cpuSelect} beats ${pSelect}!`;
+                        alert(`You lose! ${cpuSelect} beats ${pSelect}!`);
+                        return false;
                     } else {
-                        results = `You win! ${pSelect} beats ${cpuSelect}!`;
+                        alert(`You win! ${pSelect} beats ${cpuSelect}!`);
+                        return true;
                     }
                 }
-
-                return results;
             }
 
         function game() {
