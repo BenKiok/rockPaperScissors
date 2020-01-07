@@ -12,6 +12,35 @@
 
                 return plays[rand];
             }
+
+            function playRound (pSelect, cpuSelect) {
+                let results;
+                let player = pSelect.toLowerCase();
+
+                if (player === cpuSelect) {
+                    results = "It's a tie! Play again!";
+                } else if (player === "rock") {
+                    if (cpuSelect === "paper") {
+                        results = `You lose! ${cpuSelect} beats ${player}!`;
+                    } else {
+                        results = `You win! ${player} beats ${cpuSelect}!`;
+                    }
+                } else if (player === "paper") {
+                    if (cpuSelect === "scissors") {
+                        results = `You lose! ${cpuSelect} beats ${player}!`;
+                    } else {
+                        results = `You win! ${player} beats ${cpuSelect}!`;
+                    }
+                } else {
+                    if (cpuSelect === "rock") {
+                        results = `You lose! ${cpuSelect} beats ${player}!`;
+                    } else {
+                        results = `You win! ${player} beats ${cpuSelect}!`;
+                    }
+                }
+
+                return results;
+            }
         </script>
     </body>
 </html>
