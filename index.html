@@ -10,9 +10,9 @@
                 let move = prompt("What is your move?").toLowerCase();
                 if (move !== 'rock' && move !== 'paper' && move !== 'scissors') {
                     alert("Invalid play. Try again.");
-                    playerMove();
+                    return playerMove();
                 }
-
+                
                 return move;
             }
             
