@@ -6,6 +6,15 @@
     </head>
     <body>
         <script>
+            function playerMove() {
+                let move = prompt("What is your move?").toLowerCase();
+                if (move !== 'rock' && move !== 'paper' && move !== 'scissors') {
+                    alert("Invalid play. Try again.");
+                    playerMove();
+                }
+                return move;
+            }
+            
             function computerPlay() {
                 let plays = ['rock', 'paper', 'scissors'];
                 let rand = Math.floor(Math.random() * 3);
@@ -41,6 +50,10 @@
 
                 return results;
             }
+
+        function game() {
+
+        }
         </script>
     </body>
 </html>
