@@ -1,6 +1,8 @@
-const playBtn = document.getElementById('playBtn');
+const playTxt = document.querySelector('p');
+const input = document.querySelector('input');
+const btn = document.querySelector('button');
 
-playBtn.addEventListener('click', game);
+playTxt.addEventListener('click', game);
 
 function playerMove () {
     let move = prompt("What is your move?").toLowerCase();
