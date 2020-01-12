@@ -1,6 +1,6 @@
+// Requires a single paragraph tag to work
+
 const playTxt = document.querySelector('p');
-const input = document.querySelector('input');
-const btn = document.querySelector('button');
 
 playTxt.addEventListener('click', game);
 
